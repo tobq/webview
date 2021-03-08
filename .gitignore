@@ -2,3 +2,5 @@
 /build
 webview
 webview_test
+.idea
+cmake-build-*
