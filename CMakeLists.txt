@@ -1,6 +1,7 @@
-set(WEBVIEW_HEADERS_PATH C:/Users/Tobi/Downloads/microsoft.web.webview2.1.0.705.50/build/native/include)
-#set(WEBVIEW_LIBRARIES_PATH C:/Users/Tobi/Downloads/microsoft.web.webview2.1.0.705.50/build/native/x64)
+set(WEBVIEW_HEADERS_PATH ${CMAKE_CURRENT_SOURCE_DIR}/script/microsoft.web.webview2.1.0.664.37/build/native/include)
 set(WEBVIEW_LIBRARIES_PATH ${CMAKE_CURRENT_SOURCE_DIR}/dll/x64)
+#set(WEBVIEW_HEADERS_PATH C:/Users/Tobi/Downloads/microsoft.web.webview2.1.0.705.50/build/native/include)
+#set(WEBVIEW_LIBRARIES_PATH C:/Users/Tobi/Downloads/microsoft.web.webview2.1.0.705.50/build/native/x64)
 
 cmake_minimum_required(VERSION 3.17)
 project(webview)
@@ -22,5 +23,5 @@ set_target_properties(WebView2Loader PROPERTIES
 
 
 add_executable(${TARGET_NAME} WIN32 main.cc)
-target_link_libraries(${TARGET_NAME} PRIVATE webview WebView2Loader)
 target_include_directories(${TARGET_NAME} PRIVATE ${WEBVIEW_HEADERS_PATH})
+target_link_libraries(${TARGET_NAME} PRIVATE webview WebView2Loader)
