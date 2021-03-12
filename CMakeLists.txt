@@ -23,5 +23,4 @@ set_target_properties(WebView2Loader PROPERTIES
 
 add_executable(${TARGET_NAME} WIN32 main.cc)
 target_link_libraries(${TARGET_NAME} PRIVATE webview WebView2Loader)
-#target_include_directories(${TARGET_NAME} PRIVATE ${WEBVIEW_HEADERS_PATH})
 target_include_directories(${TARGET_NAME} PRIVATE ${WEBVIEW_HEADERS_PATH})
